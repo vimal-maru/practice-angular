@@ -1,0 +1,48 @@
+<h1>Angular directives have 3 types:</h1>
+
+<ul>
+    <li>Coomponent Directives: i.e Component</li>
+    <li>Structual Directives: i.e *ngIf *ngFor *switch etc...</li>
+    <li>Attribute Directives: i.e *ngStyle *ngClass</li>
+</ul>
+
+<hr>
+<h3>1. *ngIf & else directive example: </h3>
+
+<p *ngIf="leapYear; else elseBlock">
+    2024 is Leap Year
+</p>
+<ng-template #elseBlock>
+    <p> 2025 is not Leap Year</p>
+</ng-template>
+
+<hr>
+<h3>2. *ngFor directive example: </h3>
+<ul>
+    <li *ngFor="let user of userList">
+        {{user.userId}} - {{user.userName}} - {{user.userEmail}}
+    </li>
+</ul>
+<hr>
+
+
+<h3>3. *ngSwitch directive example: </h3>
+
+<div [ngSwitch]="today">
+    <p *ngSwitchCase="'Monday'">It's Monday</p>
+    <p *ngSwitchCase="'Tuesday'">It's Tuesday</p>
+    <p *ngSwitchCase="'Wednesday'">It's Wednesday</p>
+    <p *ngSwitchCase="'Thursday'">It's Thursday</p>
+    <p *ngSwitchCase="'Friday'">It's Friday</p>
+    <p *ngSwitchCase="'Saturday'">It's Saturday</p>
+    <p *ngSwitchCase="'Sunday'">It's Sunday</p>
+    <p *ngSwitchDefault>It's Holiday</p>
+</div>
+
+<button (click)="chnageTheDay('Monday')">Monday</button>
+<button (click)="chnageTheDay('Tuesday')">Tuesday</button>
+<button (click)="chnageTheDay('Wednesday')">Wednesday</button>
+<button (click)="chnageTheDay('Thursday')">Thursday</button>
+<button (click)="chnageTheDay('Friday')">Friday</button>
+<button (click)="chnageTheDay('Saturday')">Saturday</button>
+<button (click)="chnageTheDay('Sunday')">Sunday</button>

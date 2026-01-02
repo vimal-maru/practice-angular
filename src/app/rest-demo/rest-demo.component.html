@@ -1,0 +1,66 @@
+<h2>Used Dummy JSOn API for this</h2>
+<a href="https://dummyjson.com/" target="_blank">dummyjson</a>
+<br>
+<a href="https://github.com/typicode/json-server" target="_blank"> JSON SERVER</a>
+
+<hr>
+<button (click)="getAllProduct()">Get Product Data</button>
+<button (click)="hideAllProduct()">Hide Product Data</button>
+
+<ul>
+
+    @for(product of productList; track $index;){
+
+    <li><b>Title:</b>{{product.title}}</li>
+    <li><b>Description:</b>{{product.description}}</li>
+    <li><b>Category:</b>{{product.category}}</li>
+    <li><b>Price:</b>{{product.price}}</li>
+    <li><img src="{{product.thumbnail}}"></li>
+    }
+
+</ul>
+
+<hr>
+<h2>User CRUD Operations:</h2>
+
+<h2>1. Add New USER</h2>
+<div>
+    <form #saveUserForm="ngForm" (ngSubmit)="saveUser(saveUserForm.value)">
+
+        <input type="text" name="id" placeholder="Enter User Id" [ngModel]="selectedUser?.id">
+        <br><br>
+
+        <input type="text" name="name" placeholder="Enter User Name" [ngModel]="selectedUser?.name">
+        <br><br>
+
+        <input type="text" name="age" placeholder="Enter User Age" [ngModel]="selectedUser?.age">
+        <br><br>
+
+        @if(!selectedUser){
+            <button>Add User</button>
+        } @else {
+            <button>Update User</button>
+        }
+
+    </form>
+</div>
+
+<hr>
+
+<h2>2. Get All User:</h2>
+
+<button (click)="getALlUsers()">Get All Users:</button>
+
+<ul>
+    @for(user of userList; track $index) {
+    <li>
+        {{user.id}} - {{user.name}} - {{user.age}}
+        <button (click)="deleteUser(user.id)">Delete</button>
+        &nbsp;
+        <button (click)="getUserById(user.id)">Edit</button>
+    </li>
+    <br>
+    }
+</ul>
+
+<hr>

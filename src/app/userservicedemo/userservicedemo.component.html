@@ -1,0 +1,7 @@
+<h2>Get user data using user service:</h2>
+
+<button (click)="getData()">Get Data</button>
+
+@for (user of userDataList; track $index) {
+    <h3>{{user.userName}} - {{user.userEmail}}</h3>
+}

@@ -1,0 +1,22 @@
+<h2>Learn anguler 19 Data transfer using 3 ways:</h2>
+
+<p>1. Using the Router URL (need to fix this as we moved the code & URL changed)</p>
+<a [routerLink]="['/profile', {name:'Jarvis'}]">Go to My Profile</a>
+
+<p>2. Using Button click</p>
+<button (click)="goToMyProfile()">Goto My Profile</button>
+
+<p>3. Using the Router(need to fix this as we moved the code & URL changed)</p>
+<a routerLink="/profile">Go to My Profile</a>
+
+<hr>
+
+<h2>Dynamic Routing</h2>
+
+<ul>
+    @for(employee of employeList; track employee.id){
+        <li>
+            <a routerLink="/profile/{{employee.id}}/{{employee.name}}">{{employee.name}}</a>
+        </li>
+    }
+</ul>

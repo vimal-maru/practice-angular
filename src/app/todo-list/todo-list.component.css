@@ -1,0 +1,9 @@
+.task-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    list-style-type: none;
+    width: 50%;
+    padding: 10px;
+}

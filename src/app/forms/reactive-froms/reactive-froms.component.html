@@ -1,0 +1,49 @@
+<h2>Reactive Forms Example:</h2>
+
+<div>
+    <form action="" method="">
+        <input type="text" placeholder="Enter your name" name="userName" [formControl]="userName">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter password" name="password" [formControl]="password">
+        <br>
+        <br>
+        <button (click)="onButtonSubmit()" type="button">Set To Default</button>
+    </form>
+
+    <br>
+    <p>{{userName.value}}</p>
+    <p>{{password.value}}</p>
+
+</div>
+
+<hr>
+
+<div>
+    <form [formGroup]="employeeProfileData" (ngSubmit)="onFormSubmit()">
+
+        <input type="text" placeholder="Enter Employee Name" formControlName="employeeName">
+        <span *ngIf="employeeName?.hasError('required')">Name is required.</span>
+        <span class="error" *ngIf="employeeName?.invalid && (employeeName?.dirty || employeeName?.touched)">
+            Please enter a valid Name.
+        </span>
+        <br><br>
+
+        <input type="text" placeholder="Enter Employee Password" formControlName="employeePassword">
+        <span *ngIf="employeePassword?.hasError('required')">Password is required.</span>
+        <span class="error" *ngIf="employeePassword?.invalid && (employeePassword?.dirty || employeePassword?.touched)">
+            Please enter a valid Password.
+        </span>
+        <br><br>
+
+        <input type="text" placeholder="Enter Employee Email" formControlName="employeeEmail">
+        <span *ngIf="employeeEmail?.hasError('required')">Email is required.</span>
+        <span class="error" *ngIf="employeeEmail?.invalid && (employeeEmail?.dirty || employeeEmail?.touched)">
+            Please enter a valid Email.
+        </span>
+        <br><br>
+
+        <button type="button">Save</button>
+    </form>
+
+</div>
