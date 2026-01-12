@@ -1,12 +1,52 @@
-<input type="text" [(ngModel)]="task" placeholder="Enter your task">
+<div class="container">
 
-<button (click)="addTask()">Add Task</button>
+    <div class="row m-3 p-3 border">
+        <div class="col-6">
+            <input type="text" class="form-control" placeholder="Enter User Name" [(ngModel)]="userName" />
+            <br>
+            <input type="text" class="form-control" placeholder="Enter User Email" [(ngModel)]="userEmail" />
+            <br>
+            <input type="text" class="form-control" placeholder="Enter User Age" [(ngModel)]="userAge" />
+            <br>
 
-@for(task of taskList; track task.id){
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary" (click)="showUser()">Show</button>
+                <button class="btn btn-danger" (click)="hideUser()">Hide</button>
+                <button class="btn btn-dark" (click)="updateUser()">Update</button>
+            </div>
+        </div>
+        <div class="col-6">
+            @if(isUserShow()){
+            <div>
+                <p><strong>User Name: </strong>{{userName()}}</p>
+                <p><strong>User Email: </strong>{{userEmail()}}</p>
+                <p><strong>User Age: </strong>{{userAge()}}</p>
+            </div>
+            } @else {
+            <p>No User details fond!</p>
+            }
 
-    <ul class="task-list">
-        <li>{{task.id}}</li>
-        <li>{{task.task}}</li>
-        <li><button (click)="deleteTask(task.id)" >Delete</button></li>
-    </ul>
-}
+        </div>
+    </div>
+
+    <div class="row m-3 p-3 border">
+
+        <div class="col-6">
+            <input type="text" class="form-control" [(ngModel)]="task" placeholder="Enter your task">
+            <br>
+            <button class="btn btn-danger mb-3" (click)="addTask()">Add Task</button>
+
+            @for(task of taskList; track task.id){
+
+            <ul class="task-list pt-2">
+                <li>{{task.id}}</li>
+                <li>{{task.task}}</li>
+                <li><button class="btn btn-danger" (click)="deleteTask(task.id)">Delete</button></li>
+            </ul>
+            }
+        </div>
+
+    </div>
+</div>
+
+<app-footer></app-footer>

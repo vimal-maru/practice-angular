@@ -1,0 +1,116 @@
+<div class="container my-5">
+
+    <!-- 1. Production Builds -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">1. Production Builds</h3>
+            <p>
+                Production builds generate an optimized version of the Angular
+                application suitable for deployment.
+            </p>
+            <p>
+                The build process applies optimizations such as minification,
+                tree shaking, and Ahead-of-Time compilation.
+            </p>
+            <div class="info-box">
+                Production build benefits:
+                <ul class="mb-0">
+                    <li>Smaller bundle size</li>
+                    <li>Faster load times</li>
+                    <li>Improved runtime performance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Environment Configuration -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">2. Environment Configuration</h3>
+            <p>
+                Environment configuration allows managing different settings
+                for development, testing, and production environments.
+            </p>
+            <p>
+                Angular supports environment-specific files to safely store
+                API endpoints, feature flags, and configuration values.
+            </p>
+            <ul>
+                <li>Separate configs for dev and prod</li>
+                <li>Secure handling of environment variables</li>
+                <li>Easy switching during builds</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 3. Deployment Strategies -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">3. Deployment Strategies</h3>
+            <p>
+                Deployment strategies define how an Angular application is
+                hosted and delivered to users.
+            </p>
+            <p>
+                The choice of strategy depends on performance requirements,
+                scalability needs, and infrastructure.
+            </p>
+            <div class="info-box">
+                Common deployment options:
+                <ul class="mb-0">
+                    <li>Static hosting platforms</li>
+                    <li>Cloud hosting services</li>
+                    <li>Container-based deployments</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Server-Side Rendering -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">4. Server-Side Rendering (SSR)</h3>
+            <p>
+                Server-side rendering generates HTML on the server before
+                sending it to the browser.
+            </p>
+            <p>
+                This improves initial load performance and enhances
+                search engine optimization.
+            </p>
+            <div class="info-box">
+                Key advantages:
+                <ul class="mb-0">
+                    <li>Faster first contentful paint</li>
+                    <li>Better SEO</li>
+                    <li>Improved performance on slow devices</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Static Site Generation -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">5. Static Site Generation (SSG)</h3>
+            <p>
+                Static site generation pre-renders application pages at build
+                time instead of runtime.
+            </p>
+            <p>
+                This approach is ideal for content-heavy applications where
+                data does not change frequently.
+            </p>
+            <div class="info-box">
+                Ideal use cases:
+                <ul class="mb-0">
+                    <li>Documentation websites</li>
+                    <li>Marketing pages</li>
+                    <li>Blogs and landing pages</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

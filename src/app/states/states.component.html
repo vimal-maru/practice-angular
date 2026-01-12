@@ -1,0 +1,99 @@
+<div class="container my-5">
+
+    <!-- 1. Component vs Application State -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">1. Component State vs Application State</h3>
+            <p>
+                State represents the data that drives your application UI.
+                Angular applications typically manage state at different levels.
+            </p>
+            <p>
+                <strong>Component state</strong> is local and limited to a single
+                component, while <strong>application state</strong> is shared
+                across multiple parts of the application.
+            </p>
+            <div class="info-box">
+                Key differences:
+                <ul class="mb-0">
+                    <li>Component state is short-lived and isolated</li>
+                    <li>Application state is long-lived and shared</li>
+                    <li>Choosing the right scope improves maintainability</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. NgRx Basics -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">2. NgRx Basics (Store, Actions, Reducers, Effects)</h3>
+            <p>
+                NgRx is a popular state management library inspired by Redux,
+                designed specifically for Angular applications.
+            </p>
+            <p>
+                It enforces a unidirectional data flow, making state changes
+                predictable and easier to debug.
+            </p>
+            <div class="info-box">
+                Core NgRx building blocks:
+                <ul class="mb-0">
+                    <li>Store – Single source of truth</li>
+                    <li>Actions – Describe state changes</li>
+                    <li>Reducers – Handle state transitions</li>
+                    <li>Effects – Manage side effects like API calls</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Signal Store -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">3. Signal Store (New Approach)</h3>
+            <p>
+                Signal Store is a modern state management approach built on top
+                of Angular Signals, providing a simpler alternative to traditional
+                libraries.
+            </p>
+            <p>
+                It focuses on fine-grained reactivity with minimal boilerplate,
+                making state easier to reason about.
+            </p>
+            <div class="info-box">
+                Benefits of Signal Store:
+                <ul class="mb-0">
+                    <li>Signal-based reactivity</li>
+                    <li>Less boilerplate compared to NgRx</li>
+                    <li>Better alignment with modern Angular</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. State Management Patterns -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">4. State Management Patterns</h3>
+            <p>
+                Choosing the right state management pattern depends on application
+                size, complexity, and team experience.
+            </p>
+            <p>
+                Angular supports multiple patterns, ranging from simple service-based
+                state to fully centralized stores.
+            </p>
+            <div class="info-box">
+                Common patterns include:
+                <ul class="mb-0">
+                    <li>Local component state</li>
+                    <li>Shared state via services</li>
+                    <li>Centralized state using NgRx or Signal Store</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

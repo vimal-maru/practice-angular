@@ -1,10 +1,130 @@
-<h2>Two Types of Forms:</h2>
+<div class="container my-5">
 
-<ul>
-    <li>
-        <a routerLink="/reactive-from">Reactive forms</a>
-    </li>
-    <li>
-        <a routerLink="/template-from">Template driven forms</a>
-    </li>
-</ul>
+    <!-- 1. Template-driven Forms -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">1. Template-Driven Forms</h3>
+            <p>
+                Template-driven forms rely heavily on Angular templates and are
+                suitable for simple forms with minimal validation logic.
+            </p>
+            <p>
+                Form behavior is defined declaratively using directives such as
+                <strong>ngModel</strong>.
+            </p>
+            <div class="info-box">
+                Key characteristics:
+                <ul class="mb-0">
+                    <li>Easy to use and quick to implement</li>
+                    <li>Best for small-scale forms</li>
+                    <li>Less explicit control over form state</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Reactive Forms -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">2. Reactive Forms</h3>
+            <p>
+                Reactive forms provide a model-driven approach where the form
+                structure and validation logic are defined in the component class.
+            </p>
+            <p>
+                This approach offers greater control, scalability, and testability.
+            </p>
+            <div class="info-box">
+                Advantages of reactive forms:
+                <ul class="mb-0">
+                    <li>Explicit and predictable form state</li>
+                    <li>Better suited for complex forms</li>
+                    <li>Easier unit testing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Form Validation -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">3. Form Validation (Built-in & Custom)</h3>
+            <p>
+                Angular provides built-in validators to ensure form data integrity
+                and improve user experience.
+            </p>
+            <p>
+                Custom validators allow you to define business-specific validation
+                rules when built-in validators are not sufficient.
+            </p>
+            <div class="info-box">
+                Common validation scenarios:
+                <ul class="mb-0">
+                    <li>Required fields</li>
+                    <li>Email and pattern validation</li>
+                    <li>Cross-field validation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Dynamic Forms -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">4. Dynamic Forms</h3>
+            <p>
+                Dynamic forms are generated at runtime based on configuration
+                or data received from an API.
+            </p>
+            <p>
+                They are commonly used in scenarios where form fields are not
+                known at compile time.
+            </p>
+            <ul>
+                <li>Form generation from metadata</li>
+                <li>Runtime control creation</li>
+                <li>Flexible and scalable design</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 5. Form Arrays & Nested Forms -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">5. Form Arrays & Nested Forms</h3>
+            <p>
+                Form arrays allow managing collections of form controls dynamically,
+                while nested forms help structure complex form data.
+            </p>
+            <p>
+                These features are essential for building advanced forms such as
+                multi-step wizards or repeatable sections.
+            </p>
+            <div class="info-box">
+                Typical use cases:
+                <ul class="mb-0">
+                    <li>Multiple addresses</li>
+                    <li>Dynamic item lists</li>
+                    <li>Complex hierarchical data</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">Forms Examples:</h3>
+            <ul class="mb-0">
+                <li>
+                    <a routerLink="/reactive-from" class="text-danger">Reactive forms</a>
+                </li>
+                <li>
+                    <a routerLink="/template-from" class="text-danger">Template driven forms</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

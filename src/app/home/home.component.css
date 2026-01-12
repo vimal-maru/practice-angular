@@ -1,0 +1,47 @@
+body {
+  background: #f8f9fa;
+}
+
+.playlist-card {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.playlist-header {
+  border-radius: 16px 16px 0 0;
+}
+
+.topic-list li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #dee2e6;
+}
+
+.topic-list li:last-child {
+  border-bottom: none;
+}
+
+.topic-card {
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+}
+
+.topic-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.subtopic-list li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #dee2e6;
+  font-size: 0.95rem;
+}
+
+.subtopic-list li:last-child {
+  border-bottom: none;
+}
+

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-route-study',
-  imports: [RouterLink],
+  imports: [RouterLink, FooterComponent],
   templateUrl: './route-study.component.html',
   styleUrl: './route-study.component.css',
 })

@@ -1,17 +1,25 @@
-<h2>Life cycle methods</h2>
+<div class="container">
 
-<ul>
-    <li>fitst constructor called</li>
-    <li>next ngOnInit constructor called</li>
-    <li>Other Angular component life cycle stage called i.e ngOnChange etc..</li>
-    <li>last ngOnDestroy called</li>
-</ul>
+    <div class="card-body">
+        <h2>Life cycle methods</h2>
 
-<hr>
+        <ul>
+            <li>fitst constructor called</li>
+            <li>next ngOnInit constructor called</li>
+            <li>Other Angular component life cycle stage called i.e ngOnChange etc..</li>
+            <li>last ngOnDestroy called</li>
+        </ul>
 
-<div *ngIf="count!=3">
-    <h3>First : {{firstCalled}}</h3>
-    <h3>Next : {{nextCalled}}</h3>
+        <hr>
+
+        <div *ngIf="count!=3">
+            <h3>First : {{firstCalled}}</h3>
+            <h3>Next : {{nextCalled}}</h3>
+        </div>
+
+        <button (click)="counter($event)">Counter</button>
+    </div>
+
 </div>
 
-<button (click)="counter($event)">Counter</button>
+<app-footer></app-footer>

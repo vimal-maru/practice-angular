@@ -1,0 +1,46 @@
+<div class="container my-5">
+    <div class="card section-card mb-4 mt-2">
+
+        <div class="mx-4 p-2">
+
+            <h3 class="section-title mb-2"> Get Products using Demmy JSON Free API</h3>
+            <a href="https://dummyjson.com/" class="text-danger" target="_blank">Dummy JSON</a>
+
+            <div class="d-flex gap-2 mt-2">
+                <button class="btn btn-danger" (click)="getAllProduct()">Get Product Data</button>
+                <button class="btn btn-danger" (click)="hideAllProduct()">Hide Product Data</button>
+            </div>
+        </div>
+
+        @if(isProductLoad) {
+        <ng-container>
+            <div class="row d-flex justify-content-center">
+                <div class="spinner-border text-muted"></div>
+                <div class="spinner-border text-primary"></div>
+                <div class="spinner-border text-success"></div>
+                <div class="spinner-border text-info"></div>
+                <div class="spinner-border text-warning"></div>
+                <div class="spinner-border text-danger"></div>
+                <div class="spinner-border text-secondary"></div>
+                <div class="spinner-border text-dark"></div>
+                <div class="spinner-border text-light"></div>
+            </div>
+        </ng-container>
+        } @else{
+        <ng-container>
+            <ul class="row list-unstyled p-3">
+                @for(product of productList; track $index;){
+
+                <li><b>Title:</b>{{product.title}}</li>
+                <li><b>Description:</b>{{product.description}}</li>
+                <li><b>Category:</b>{{product.category}}</li>
+                <li><b>Price:</b>{{product.price}}</li>
+                <li><img src="{{product.thumbnail}}"></li>
+                }
+            </ul>
+        </ng-container>
+        }
+    </div>
+</div>
+
+<app-footer></app-footer>

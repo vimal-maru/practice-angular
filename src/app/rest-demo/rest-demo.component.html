@@ -1,66 +1,196 @@
-<h2>Used Dummy JSOn API for this</h2>
-<a href="https://dummyjson.com/" target="_blank">dummyjson</a>
-<br>
-<a href="https://github.com/typicode/json-server" target="_blank"> JSON SERVER</a>
+<div class="container my-5">
 
-<hr>
-<button (click)="getAllProduct()">Get Product Data</button>
-<button (click)="hideAllProduct()">Hide Product Data</button>
+    <!-- 1. CRUD with JSON Server -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">1. CRUD with JSON Server</h3>
+            <p>
+                JSON Server is a lightweight tool used to create a fake REST API
+                for development and testing purposes.
+            </p>
+            <p>
+                It allows developers to perform full CRUD operations without
+                setting up a real backend.
+            </p>
+            <div class="info-box">
+                Supported operations:
+                <ul class="mb-0">
+                    <li>Create (POST)</li>
+                    <li>Read (GET)</li>
+                    <li>Update (PUT / PATCH)</li>
+                    <li>Delete (DELETE)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<ul>
+    <!-- 2. API Call Integration -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">2. API Call Integration</h3>
+            <p>
+                Angular integrates with backend systems using the HttpClient service
+                to send and receive data over HTTP.
+            </p>
+            <p>
+                API integration is essential for building data-driven applications
+                such as dashboards, admin panels, and user management systems.
+            </p>
+            <ul>
+                <li>RESTful API communication</li>
+                <li>Observable-based response handling</li>
+                <li>Error and loading state management</li>
+            </ul>
+        </div>
+    </div>
 
-    @for(product of productList; track $index;){
+    <!-- 3. Resource API -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">3. Resource API (resource & rxResource)</h3>
+            <p>
+                The Resource API provides a modern and declarative way to fetch
+                and manage remote data using Angular Signals.
+            </p>
+            <p>
+                It simplifies API interaction by handling loading, error, and
+                caching behavior automatically.
+            </p>
+            <div class="info-box">
+                Key advantages:
+                <ul class="mb-0">
+                    <li>Signal-based data fetching</li>
+                    <li>Automatic state management</li>
+                    <li>Reduced RxJS boilerplate</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    <li><b>Title:</b>{{product.title}}</li>
-    <li><b>Description:</b>{{product.description}}</li>
-    <li><b>Category:</b>{{product.category}}</li>
-    <li><b>Price:</b>{{product.price}}</li>
-    <li><img src="{{product.thumbnail}}"></li>
-    }
+    <!-- 4. Session Storage -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">4. Session Storage</h3>
+            <p>
+                Session storage allows storing data temporarily in the browser
+                for the duration of a page session.
+            </p>
+            <p>
+                Data is cleared automatically when the browser tab is closed.
+            </p>
+            <ul>
+                <li>User session data</li>
+                <li>Temporary UI state</li>
+                <li>Short-lived tokens</li>
+            </ul>
+        </div>
+    </div>
 
-</ul>
+    <!-- 5. Local Storage -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">5. Local Storage</h3>
+            <p>
+                Local storage enables persistent storage of key-value data
+                in the browser even after the page is refreshed or closed.
+            </p>
+            <p>
+                It is commonly used for saving user preferences and cached data.
+            </p>
+            <div class="info-box">
+                Typical use cases:
+                <ul class="mb-0">
+                    <li>Theme preferences</li>
+                    <li>User settings</li>
+                    <li>Offline caching</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<hr>
-<h2>User CRUD Operations:</h2>
+    <!-- 6. Cookies -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">6. Cookies</h3>
+            <p>
+                Cookies are small pieces of data stored in the browser and
+                automatically sent with HTTP requests.
+            </p>
+            <p>
+                They are often used for authentication, tracking, and session
+                management.
+            </p>
+            <ul>
+                <li>Authentication tokens</li>
+                <li>Session identifiers</li>
+                <li>User preferences</li>
+            </ul>
+        </div>
+    </div>
 
-<h2>1. Add New USER</h2>
-<div>
-    <form #saveUserForm="ngForm" (ngSubmit)="saveUser(saveUserForm.value)">
+    <!-- 7. Functional Guards & Resolvers -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">7. Functional Guards & Resolvers</h3>
+            <p>
+                Functional guards and resolvers provide a more concise and
+                readable way to protect routes and preload data.
+            </p>
+            <p>
+                They reduce boilerplate compared to class-based implementations.
+            </p>
+            <div class="info-box">
+                Benefits:
+                <ul class="mb-0">
+                    <li>Simpler syntax</li>
+                    <li>Improved maintainability</li>
+                    <li>Better alignment with functional patterns</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-        <input type="text" name="id" placeholder="Enter User Id" [ngModel]="selectedUser?.id">
-        <br><br>
+    <!-- 8. Deferred Loading -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">8. Deferred Loading (&#64;defer)</h3>
+            <p>
+                Deferred loading allows components or templates to be loaded
+                only when they are needed.
+            </p>
+            <p>
+                This improves performance by reducing initial rendering cost
+                and speeding up page load times.
+            </p>
+            <div class="info-box">
+                Common scenarios:
+                <ul class="mb-0">
+                    <li>Below-the-fold content</li>
+                    <li>Heavy components</li>
+                    <li>Conditional feature loading</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-        <input type="text" name="name" placeholder="Enter User Name" [ngModel]="selectedUser?.name">
-        <br><br>
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">Free APIs & JSON Server</h3>
 
-        <input type="text" name="age" placeholder="Enter User Age" [ngModel]="selectedUser?.age">
-        <br><br>
+            <ul>
+                <li><a href="https://dummyjson.com/" class="text-danger" target="_blank">Dummy JSON</a></li>
+                <li><a href="https://jsonplaceholder.typicode.com/users" class="text-danger" target="_blank">JSON
+                        Placeholder</a></li>
+                <li><a href="https://github.com/typicode/json-server" class="text-danger" target="_blank"> JSON
+                        SERVER</a></li>
+            </ul>
 
-        @if(!selectedUser){
-            <button>Add User</button>
-        } @else {
-            <button>Update User</button>
-        }
-
-    </form>
+            <div class="row d-flex gap-2">
+                <a routerLink="/product" class="text-danger">Product API Example</a>
+                <a routerLink="/rest-user" class="text-danger">USER API Example</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-<hr>
-
-<h2>2. Get All User:</h2>
-
-<button (click)="getALlUsers()">Get All Users:</button>
-
-<ul>
-    @for(user of userList; track $index) {
-    <li>
-        {{user.id}} - {{user.name}} - {{user.age}}
-        <button (click)="deleteUser(user.id)">Delete</button>
-        &nbsp;
-        <button (click)="getUserById(user.id)">Edit</button>
-    </li>
-    <br>
-    }
-</ul>
-
-<hr>
+<app-footer></app-footer>

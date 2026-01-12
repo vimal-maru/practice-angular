@@ -1,0 +1,51 @@
+<div class="container mt-3">
+
+    <div class="mb-4">
+        <h3 class="section-title">User Data From: </h3>
+        <a class="text-danger" href="https://jsonplaceholder.typicode.com/users" target="_blank"> Json Place holder dummy API</a>
+    </div>
+
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(isUserLoded) {
+            <ng-container>
+                <tr>
+                    <div class="spinner-border text-muted"></div>
+                    <div class="spinner-border text-primary"></div>
+                    <div class="spinner-border text-success"></div>
+                    <div class="spinner-border text-info"></div>
+                    <div class="spinner-border text-warning"></div>
+                    <div class="spinner-border text-danger"></div>
+                    <div class="spinner-border text-secondary"></div>
+                    <div class="spinner-border text-dark"></div>
+                    <div class="spinner-border text-light"></div>
+                </tr>
+            </ng-container>
+            } @else{
+            <ng-container>
+                @for (user of userList; track user.id) {
+                <tr>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.website}}</td>
+                </tr>
+                }
+
+                @empty {
+                <p>No User found!</p>
+                }
+            </ng-container>
+            }
+
+        </tbody>
+    </table>
+</div>
+<app-footer></app-footer>

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../footer/footer.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-page-not-found',
-  imports: [],
+  imports: [FooterComponent,RouterLink],
   templateUrl: './page-not-found.component.html',
   styleUrl: './page-not-found.component.css'
 })

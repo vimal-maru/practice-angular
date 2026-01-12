@@ -1,17 +1,11 @@
-import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FooterComponent } from '../../footer/footer.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-template-driven-forms',
-  imports: [FormsModule, NgIf],
+  imports: [FooterComponent, RouterLink],
   templateUrl: './template-driven-forms.component.html',
   styleUrl: './template-driven-forms.component.css',
 })
-export class TemplateDrivenFormsComponent {
-  userData: any;
-
-  addUserData(val: NgForm) {
-    this.userData = val;
-  }
-}
+export class TemplateDrivenFormsComponent {}

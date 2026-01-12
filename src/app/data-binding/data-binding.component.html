@@ -1,0 +1,55 @@
+<div class="container mt-5 p-5" [style.backgroundColor]="bgColor" [style.color]="fontColor" [style.border]="border"
+    [style.padding]="padding">
+    <h4>1. Interpolatio using curly brackets:</h4>
+    <div class="row">
+        <div class="col-4">
+            <strong>Book TItle: </strong> {{bookTitle}}
+        </div>
+        <div class="col-4">
+            <strong>Book Author: </strong> {{author}}
+        </div>
+        <div class="col-4">
+            <strong>Book Price: </strong> {{price}}
+        </div>
+    </div>
+
+    <br>
+    <h4>2. Data or property Binding using square [] brackets:</h4>
+    <div class="row">
+        <div class="col-4">
+            <input type="text" [value]="bookTitle" />
+        </div>
+        <div class="col-4">
+            <div [class]="bgColorSuccess">
+                Test Details
+            </div>
+        </div>
+        <div class="col-4">
+            <input [type]="inputType"> Select User
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-4">
+            <button class="btn btn-success" (click)="showMessage()">Show Message</button>
+        </div>
+        <div class="col-4 d-flex gap-2">
+            <button class="btn btn-success" (click)="changeTheme('DARK')">Dark Theme</button>
+            <button class="btn btn-success" (click)="changeTheme('Light')">Default Theme</button>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-danger" (click)="chnageBookPrice()">Book Price Change</button>
+        </div>
+    </div>
+
+    <br>
+    <h4>3. Two way Data Binding using FormsModule [(ngModel)] brackets:</h4>
+    <div class="row">
+        <div class="col-6">
+            <input class="form-control" type="text" [(ngModel)]="bookName">
+        </div>
+        <div class="col-6">
+            <p><strong>Book Name: </strong>{{bookName}}</p>
+        </div>
+    </div>
+</div>

@@ -1,17 +1,79 @@
-<div class="nav">
+<!-- Header / Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#dd0031;">
+    <div class="container">
 
-    <span class="logo">Angular19</span>
+        <!-- Brand -->
+        <a class="navbar-brand fw-bold" href="#">
+            Angular Roadmap
+        </a>
 
-    <ul class="list-style">
-        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home </a></li>
-        <li><a routerLink="/todo-list" routerLinkActive="active">TODO ListApp </a></li>
-        <li><a routerLink="/dyanamic-style" routerLinkActive="active">Dynamic-Style</a></li>
-        <li><a routerLink="/directives" routerLinkActive="active">Directives</a></li>
-        <li><a routerLink="/routes" routerLinkActive="active">Routes</a></li>
-        <li><a routerLink="/forms" routerLinkActive="active">Forms</a></li>
-        <li><a routerLink="/pipes" routerLinkActive="active">Pipes</a></li>
-        <li><a routerLink="/life-cycle" routerLinkActive="active">Life-Cycle</a></li>
-        <li><a routerLink="/service-demo" routerLinkActive="active">Service Demo</a></li>
-        <li><a routerLink="/rest-demo" routerLinkActive="active">REST API Demo</a></li>
-    </ul>
-</div>
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#angularNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="angularNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">Home </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/overview" routerLinkActive="active">Overview</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/components" routerLinkActive="active">Components</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/directives" routerLinkActive="active">Directives</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/pipes" routerLinkActive="active">Pipes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/signals" routerLinkActive="active">Signals</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/routes" routerLinkActive="active">Routing</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/forms" routerLinkActive="active">Forms</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/service-demo" routerLinkActive="active">Services & DI</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/rest-demo" routerLinkActive="active">APIs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/performance" routerLinkActive="active">Performance</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/states" routerLinkActive="active">State</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/testing" routerLinkActive="active">Testing</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/build" routerLinkActive="active">Build & Deploy</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

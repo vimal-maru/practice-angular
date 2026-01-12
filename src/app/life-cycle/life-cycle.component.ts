@@ -1,10 +1,11 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { FooterComponent } from "../footer/footer.component";
 
 
 @Component({
   selector: 'app-life-cycle',
-  imports: [NgIf],
+  imports: [NgIf, FooterComponent],
   templateUrl: './life-cycle.component.html',
   styleUrl: './life-cycle.component.css',
 })

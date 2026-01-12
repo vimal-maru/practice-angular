@@ -1,0 +1,132 @@
+<div class="container my-5">
+
+    <div class="row mb-4">
+        <h5 class="mb-3">Employee Details: <a class="text-danger" href="https://www.freeprojectapi.com/api.html" target="_blank">Employee
+                API</a> </h5>
+
+        <form id="employeeForm" [formGroup]="employeeForm">
+            <input type="hidden" formControlName="employeeId" name="employeeId" />
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" formControlName="fullName" name="fullName" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" name="email" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Phone</label>
+                <input type="text" class="form-control" formControlName="phone" name="phone" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <select class="form-select" formControlName="gender" name="gender">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Department</label>
+                <select class="form-select" (click)="getAllDepartments()" formControlName="departmentId"
+                    name="departmentId">
+                    @for (department of departmentList; track department.departmentId) {
+                    <option [value]="department.departmentId">{{department.departmentName}}</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Designation</label>
+                <select class="form-select" (click)="getDesignationsByDepartment()" formControlName="designationId"
+                    name="designationId">
+                    @for (designation of designationList; track designation.designationId) {
+                    <option [value]="designation.designationId">{{designation.designationName}}</option>
+                    }
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Date of Joining</label>
+                <input type="date" class="form-control" formControlName="dateOfJoining" name="dateOfJoining" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Employee Type</label>
+                <input type="text" class="form-control" formControlName="employeeType" name="employeeType" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Salary</label>
+                <input type="number" class="form-control" formControlName="salary" name="salary" />
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+                @if(employeeForm.value.employeeId){
+                <button type="button" class="btn btn-success" (click)="updateEmployee()">Update</button>
+                } @else {
+                <button type="button" class="btn btn-primary" (click)="saveEmployee()">Save</button>
+                }
+                <button type="reset" class="btn btn-outline-secondary">Reset</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <!-- ===================== ROW 2 : TABLE ===================== -->
+    <div class="row">
+        <div class="col-12">
+            <h5 class="mb-3">Employee List</h5>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Gender</th>
+                            <th>DOJ</th>
+                            <th>Type</th>
+                            <th>Salary</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (employeeObj of employeeList; track employeeObj.employeeId) {
+                        <tr>
+                            <td>{{employeeObj.employeeId}}</td>
+                            <td>{{employeeObj.fullName | uppercase}}</td>
+                            <td>{{employeeObj.email | lowercase}}</td>
+                            <td>{{employeeObj.phone}}</td>
+                            <td>{{employeeObj.gender | uppercase}}</td>
+                            <td>{{employeeObj.dateOfJoining | date:'dd-MMMM-YYYY'}}</td>
+                            <td>{{employeeObj.employeeType}}</td>
+                            <td>{{employeeObj.salary}}</td>
+                            <td>{{employeeObj.departmentName}}</td>
+                            <td>{{employeeObj.designationName}}</td>
+                            <td class="d-flex gap-3">
+                                <button class="btn btn-dark"
+                                    (click)="editEmployee(employeeObj.employeeId)">Edit</button>
+                                <button class="btn btn-danger"
+                                    (click)="deleteEmployee(employeeObj.employeeId)">Delete</button>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

@@ -1,22 +1,182 @@
-<h2>Learn anguler 19 Data transfer using 3 ways:</h2>
+<div class="container my-5">
 
-<p>1. Using the Router URL (need to fix this as we moved the code & URL changed)</p>
-<a [routerLink]="['/profile', {name:'Jarvis'}]">Go to My Profile</a>
+    <!-- 1. Router Configuration -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">1. Router Configuration</h3>
+            <p>
+                Angular routing enables navigation between different views or pages
+                within a single-page application without reloading the browser.
+            </p>
+            <p>
+                Routes are defined by mapping URL paths to components using the
+                Angular Router.
+            </p>
+            <div class="info-box">
+                Core routing concepts:
+                <ul class="mb-0">
+                    <li>Routes array</li>
+                    <li>RouterModule configuration</li>
+                    <li>router-outlet placeholder</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<p>2. Using Button click</p>
-<button (click)="goToMyProfile()">Goto My Profile</button>
+    <!-- 2. Route Parameters & Query Params -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">2. Route Parameters & Query Params</h3>
+            <p>
+                Route parameters allow passing dynamic values through the URL path,
+                while query parameters are used for optional or filter-based data.
+            </p>
+            <ul>
+                <li>Route params are part of the URL path</li>
+                <li>Query params follow the <code>?</code> symbol</li>
+                <li>Both support reactive access and updates</li>
+            </ul>
+            <p>
+                These parameters are commonly used for detail pages, filtering,
+                and pagination.
+            </p>
+        </div>
+    </div>
 
-<p>3. Using the Router(need to fix this as we moved the code & URL changed)</p>
-<a routerLink="/profile">Go to My Profile</a>
+    <!-- 3. Lazy Loading -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">3. Lazy Loading Modules</h3>
+            <p>
+                Lazy loading improves application performance by loading feature
+                modules only when they are needed.
+            </p>
+            <p>
+                This reduces the initial bundle size and speeds up application startup.
+            </p>
+            <div class="info-box">
+                Advantages of lazy loading:
+                <ul class="mb-0">
+                    <li>Faster initial load</li>
+                    <li>Optimized bundle size</li>
+                    <li>Better scalability</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<hr>
+    <!-- 4. Route Guards & Resolvers -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">4. Route Guards & Resolvers</h3>
+            <p>
+                Route guards control access to routes based on conditions such as
+                authentication or authorization.
+            </p>
+            <p>
+                Resolvers fetch required data before a route is activated, ensuring
+                the component loads with complete data.
+            </p>
+            <div class="info-box">
+                Common use cases:
+                <ul class="mb-0">
+                    <li>Authentication checks</li>
+                    <li>Role-based access control</li>
+                    <li>Preloading route data</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<h2>Dynamic Routing</h2>
+    <!-- 5. Nested Routing -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">5. Nested Routing</h3>
+            <p>
+                Nested routing allows routes to be defined within other routes,
+                enabling complex layouts with multiple router outlets.
+            </p>
+            <p>
+                This approach is commonly used in dashboards and admin panels.
+            </p>
+            <ul>
+                <li>Parent-child route relationships</li>
+                <li>Multiple router outlets</li>
+                <li>Shared layout components</li>
+            </ul>
+        </div>
+    </div>
 
-<ul>
-    @for(employee of employeList; track employee.id){
-        <li>
-            <a routerLink="/profile/{{employee.id}}/{{employee.name}}">{{employee.name}}</a>
-        </li>
-    }
-</ul>
+    <!-- 6. Dynamic Routing & 404 Page -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">6. Dynamic Routing & 404 Page</h3>
+            <p>
+                Dynamic routing enables handling of unknown or variable routes
+                using wildcard paths.
+            </p>
+            <p>
+                A dedicated 404 (Page Not Found) component improves user experience
+                by guiding users when an invalid URL is accessed.
+            </p>
+            <div class="info-box">
+                Best practices:
+                <ul class="mb-0">
+                    <li>Always define a wildcard route</li>
+                    <li>Show user-friendly error messages</li>
+                    <li>Provide navigation back to valid pages</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. Programmatic Navigation -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">7. Programmatic Navigation</h3>
+            <p>
+                Programmatic navigation allows route changes using code instead of
+                template links.
+            </p>
+            <p>
+                It is commonly used after form submissions, login actions, or
+                conditional navigation flows.
+            </p>
+            <ul>
+                <li>Navigate based on application logic</li>
+                <li>Pass route parameters dynamically</li>
+                <li>Control navigation behavior precisely</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card section-card mb-4">
+
+        <h2>Data transfer using 3 ways:</h2>
+
+        <p>1. Using the Router URL (need to fix this as we moved the code & URL changed)</p>
+        <a [routerLink]="['/profile', {name:'Jarvis'}]">Go to My Profile</a>
+
+        <p>2. Using Button click</p>
+        <button (click)="goToMyProfile()">Goto My Profile</button>
+
+        <p>3. Using the Router(need to fix this as we moved the code & URL changed)</p>
+        <a routerLink="/profile">Go to My Profile</a>
+
+        <hr>
+
+        <h2>Dynamic Routing</h2>
+
+        <ul>
+            @for(employee of employeList; track employee.id){
+            <li>
+                <a routerLink="/profile/{{employee.id}}/{{employee.name}}">{{employee.name}}</a>
+            </li>
+            }
+        </ul>
+    </div>
+
+
+</div>
+
+<app-footer></app-footer>

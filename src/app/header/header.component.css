@@ -28,5 +28,7 @@
 }
 
 .active {
-    background-color: red;
+    background-color: white;
+    color: red !important;
+    font-weight: bold;
 }

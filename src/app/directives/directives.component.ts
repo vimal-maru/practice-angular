@@ -1,9 +1,11 @@
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component } from '@angular/core';
+import { FooterComponent } from "../footer/footer.component";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-directives',
-  imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, FooterComponent, RouterLink],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css',
 })

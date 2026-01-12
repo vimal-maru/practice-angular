@@ -1,40 +1,11 @@
-<h1>Template Driven forms</h1>
+<div class="container my-2 pt-2">
+    <div class="section-card p-3">
+        <div class="row d-flex gap-2">
+            <a routerLink="/template-from-user" class="text-danger">User Example</a>
+            <a routerLink="/template-from-employee" class="text-danger">Employee Example</a>
+            <a routerLink="/template-from-person" class="text-danger">Person Example</a>
+        </div>
+    </div>
+</div>
 
-<form #userForm="ngForm" (ngSubmit)="addUserData(userForm.value)">
-
-    <input type="text" placeholder="Enter Name" name="name" #name="ngModel" ngModel required>
-    <span *ngIf="name.invalid && name.touched" class="error">Name must be valid.</span>
-    <br><br>
-
-    <input type="password" placeholder="Enter Password" name="password" #password="ngModel" ngModel required>
-    <span *ngIf="password.invalid && password.touched" class="error">Password must be valid.</span>
-    <br><br>
-
-    <input type="text" placeholder="Enter Email" name="email" #email="ngModel" ngModel required>
-    <span *ngIf="email.invalid && email.touched" class="error">Email must be valid.</span>
-    <br><br>
-
-    <input type="number" placeholder="Enter ZipCode" name="zipcode" #zipcode="ngModel" ngModel required
-        pattern="[0-9]{6}" maxlength="6">
-    <span *ngIf="zipcode.invalid && zipcode.touched" class="error">ZipCode must be valid.</span>
-    <br><br>
-
-    <select name="gender" #gender="ngModel" ngModel required>
-        <option value="">Select Gengder</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-    </select>
-    <span *ngIf="gender.invalid && gender.touched" class="error">Please select the gender</span>
-    <br><br>
-
-    <input type="number" name="age" #age="ngModel" ngModel placeholder="Enter your age" required>
-    <span *ngIf="age.invalid && age.touched" class="error">Password must be valid.</span>
-    <br><br>
-
-    <button [disabled]="userForm.invalid">Add User</button>
-
-</form>
-<h2>{{userData?.name}}</h2>
-<h2>{{userData?.password}}</h2>
-<h2>{{userData?.gender}}</h2>
-<h2>{{userData?.age}}</h2>
+<app-footer></app-footer>

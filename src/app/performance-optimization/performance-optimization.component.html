@@ -1,0 +1,118 @@
+<div class="container my-5">
+
+    <!-- 1. Change Detection Strategies -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">1. Change Detection Strategies</h3>
+            <p>
+                Angular uses a change detection mechanism to keep the UI in sync
+                with application state. By default, Angular checks the entire
+                component tree for changes.
+            </p>
+            <p>
+                Understanding change detection is critical for building
+                high-performance applications.
+            </p>
+            <div class="info-box">
+                Key points:
+                <ul class="mb-0">
+                    <li>Default strategy checks all components</li>
+                    <li>Frequent checks can impact performance</li>
+                    <li>Optimization reduces unnecessary re-rendering</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. OnPush Optimization -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">2. OnPush Optimization</h3>
+            <p>
+                The OnPush change detection strategy tells Angular to check a
+                component only when its inputs change or an explicit event occurs.
+            </p>
+            <p>
+                This significantly improves performance for large and complex UIs.
+            </p>
+            <div class="info-box">
+                When to use OnPush:
+                <ul class="mb-0">
+                    <li>Immutable data patterns</li>
+                    <li>Pure components</li>
+                    <li>Signal-based state updates</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Lazy Loading & Code Splitting -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">3. Lazy Loading & Code Splitting</h3>
+            <p>
+                Lazy loading and code splitting reduce the initial bundle size
+                by loading application features only when required.
+            </p>
+            <p>
+                This leads to faster startup times and better user experience.
+            </p>
+            <div class="info-box">
+                Benefits:
+                <ul class="mb-0">
+                    <li>Smaller initial JavaScript payload</li>
+                    <li>Faster page load</li>
+                    <li>Improved scalability</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Tree Shaking & Bundle Optimization -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">4. Tree Shaking & Bundle Optimization</h3>
+            <p>
+                Tree shaking is a build-time optimization that removes unused
+                code from the final production bundle.
+            </p>
+            <p>
+                Angular’s build process automatically applies tree shaking
+                when creating production builds.
+            </p>
+            <div class="info-box">
+                Optimization techniques:
+                <ul class="mb-0">
+                    <li>Use ES modules</li>
+                    <li>Avoid unused imports</li>
+                    <li>Prefer standalone components</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Virtual Scrolling & CDK -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">5. Virtual Scrolling & CDK</h3>
+            <p>
+                Virtual scrolling renders only the visible portion of large
+                data sets, improving performance and reducing memory usage.
+            </p>
+            <p>
+                The Angular Component Dev Kit (CDK) provides utilities to
+                implement virtual scrolling efficiently.
+            </p>
+            <div class="info-box">
+                Ideal use cases:
+                <ul class="mb-0">
+                    <li>Large lists or tables</li>
+                    <li>Infinite scrolling views</li>
+                    <li>High-performance dashboards</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

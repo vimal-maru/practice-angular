@@ -1,0 +1,147 @@
+<div class="container my-5">
+
+    <!-- 1. Signals Overview -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">1. Signals & linkedSignal()</h3>
+            <p>
+                Signals are a modern reactive primitive in Angular that represent
+                <strong>stateful values</strong>. When a signal changes, Angular
+                automatically updates the UI.
+            </p>
+            <p>
+                <strong>linkedSignal()</strong> allows one signal to derive its value
+                from another while remaining reactive.
+            </p>
+            <div class="info-box">
+                Key benefits of signals:
+                <ul class="mb-0">
+                    <li>Fine-grained reactivity</li>
+                    <li>No manual subscriptions</li>
+                    <li>Better performance than traditional change detection</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Signal-based Components -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">2. Signal-Based Components</h3>
+            <p>
+                Signal-based components use signals directly inside component classes
+                to manage state instead of class properties or RxJS subscriptions.
+            </p>
+            <p>
+                This approach results in:
+            </p>
+            <ul>
+                <li>Simpler component logic</li>
+                <li>Automatic UI updates</li>
+                <li>Reduced boilerplate code</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 3. Computed Signals & Effects -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">3. Computed Signals & Effects</h3>
+            <p>
+                <strong>Computed signals</strong> derive values from other signals
+                and recompute automatically when dependencies change.
+            </p>
+            <p>
+                <strong>Effects</strong> are used to perform side effects such as
+                logging, API calls, or DOM interactions when signals update.
+            </p>
+            <div class="info-box">
+                Best practices:
+                <ul class="mb-0">
+                    <li>Use computed signals for derived state</li>
+                    <li>Use effects only for side effects</li>
+                    <li>Avoid heavy logic inside effects</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. RxJS Basics -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">4. RxJS Basics & Operators</h3>
+            <p>
+                RxJS is a reactive programming library based on
+                <strong>Observables</strong>. It is heavily used in Angular for
+                handling asynchronous operations.
+            </p>
+            <p>
+                Common RxJS operators include:
+            </p>
+            <ul>
+                <li>map</li>
+                <li>filter</li>
+                <li>switchMap</li>
+                <li>mergeMap</li>
+                <li>catchError</li>
+            </ul>
+            <p>
+                RxJS excels in handling complex async workflows such as API streams
+                and real-time data.
+            </p>
+        </div>
+    </div>
+
+    <!-- 5. Observables vs Signals -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">5. Observables vs Signals</h3>
+            <p>
+                Both Observables and Signals support reactive programming, but they
+                serve different purposes.
+            </p>
+            <div class="info-box">
+                Key differences:
+                <ul class="mb-0">
+                    <li>Signals are synchronous and state-focused</li>
+                    <li>Observables are asynchronous and stream-focused</li>
+                    <li>Signals do not require subscriptions</li>
+                    <li>Observables are ideal for HTTP and event streams</li>
+                </ul>
+            </div>
+            <p>
+                Modern Angular applications often use <strong>Signals for UI state</strong>
+                and <strong>RxJS for async operations</strong>.
+            </p>
+        </div>
+    </div>
+
+    <!-- 6. To-Do List Project -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">6. To-Do List Project (Using Signals)</h3>
+            <p>
+                The To-Do List project demonstrates practical usage of signals in
+                a real-world scenario.
+            </p>
+            <p>
+                Concepts covered:
+            </p>
+            <ul>
+                <li>Signal-based state management</li>
+                <li>Computed signals for filtered lists</li>
+                <li>Effects for persistence or logging</li>
+                <li>Clean, reactive UI updates</li>
+            </ul>
+            <p>
+                This project reinforces how signals simplify application state
+                while improving performance.
+            </p>
+            <h4>Example:</h4>
+            <a class="text-danger" routerLink="/todo-list" routerLinkActive="active">TODO ListApp </a>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

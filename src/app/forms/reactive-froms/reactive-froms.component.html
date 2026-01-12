@@ -1,49 +1,11 @@
-<h2>Reactive Forms Example:</h2>
-
-<div>
-    <form action="" method="">
-        <input type="text" placeholder="Enter your name" name="userName" [formControl]="userName">
-        <br>
-        <br>
-        <input type="text" placeholder="Enter password" name="password" [formControl]="password">
-        <br>
-        <br>
-        <button (click)="onButtonSubmit()" type="button">Set To Default</button>
-    </form>
-
-    <br>
-    <p>{{userName.value}}</p>
-    <p>{{password.value}}</p>
-
+<div class="container my-2 pt-2">
+    <div class="section-card p-3">
+        <div class="row d-flex gap-2">
+            <a routerLink="/reactive-from-user" class="text-danger">User Example</a>
+            <a routerLink="/reactive-from-employee" class="text-danger">Employee Example</a>
+            <a routerLink="/reactive-from-person" class="text-danger">Person Example</a>
+        </div>
+    </div>
 </div>
 
-<hr>
-
-<div>
-    <form [formGroup]="employeeProfileData" (ngSubmit)="onFormSubmit()">
-
-        <input type="text" placeholder="Enter Employee Name" formControlName="employeeName">
-        <span *ngIf="employeeName?.hasError('required')">Name is required.</span>
-        <span class="error" *ngIf="employeeName?.invalid && (employeeName?.dirty || employeeName?.touched)">
-            Please enter a valid Name.
-        </span>
-        <br><br>
-
-        <input type="text" placeholder="Enter Employee Password" formControlName="employeePassword">
-        <span *ngIf="employeePassword?.hasError('required')">Password is required.</span>
-        <span class="error" *ngIf="employeePassword?.invalid && (employeePassword?.dirty || employeePassword?.touched)">
-            Please enter a valid Password.
-        </span>
-        <br><br>
-
-        <input type="text" placeholder="Enter Employee Email" formControlName="employeeEmail">
-        <span *ngIf="employeeEmail?.hasError('required')">Email is required.</span>
-        <span class="error" *ngIf="employeeEmail?.invalid && (employeeEmail?.dirty || employeeEmail?.touched)">
-            Please enter a valid Email.
-        </span>
-        <br><br>
-
-        <button type="button">Save</button>
-    </form>
-
-</div>
+<app-footer></app-footer>

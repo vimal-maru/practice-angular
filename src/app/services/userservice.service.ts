@@ -33,7 +33,7 @@ export class UserserviceService {
     return this.http.get(appUrl);
   }
 
-  //User CRUD Operations
+  //User CRUD Operations with json server
 
   //1.get all user
 

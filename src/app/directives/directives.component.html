@@ -1,48 +1,181 @@
-<h1>Angular directives have 3 types:</h1>
+<div class="container my-5">
 
-<ul>
-    <li>Coomponent Directives: i.e Component</li>
-    <li>Structual Directives: i.e *ngIf *ngFor *switch etc...</li>
-    <li>Attribute Directives: i.e *ngStyle *ngClass</li>
-</ul>
+    <!-- 1. Directives Overview -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">1. Directives Overview</h3>
+            <p>
+                Directives are special instructions in Angular that allow you to
+                <strong>manipulate the DOM</strong>, change element appearance, or control rendering logic.
+            </p>
+            <p>
+                They extend HTML by adding custom behavior to elements.
+            </p>
+            <div class="info-box">
+                Angular provides three types of directives:
+                <ul class="mb-0">
+                    <li>Structural Directives</li>
+                    <li>Attribute Directives</li>
+                    <li>Custom Directives</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<hr>
-<h3>1. *ngIf & else directive example: </h3>
+    <!-- 2. Built-in Directives -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">2. Built-in Directives (ngIf, ngFor, ngSwitch)</h3>
+            <p>
+                Built-in structural directives control how elements are added or removed from the DOM.
+            </p>
+            <ul>
+                <li><strong>*ngIf</strong> – Conditionally render elements</li>
+                <li><strong>*ngFor</strong> – Render lists dynamically</li>
+                <li><strong>*ngSwitch</strong> – Display content based on conditions</li>
+            </ul>
 
-<p *ngIf="leapYear; else elseBlock">
-    2024 is Leap Year
-</p>
-<ng-template #elseBlock>
-    <p> 2025 is not Leap Year</p>
-</ng-template>
+            
+            <div class="info-box">
+                <h6>1. *ngIf & else directive example: </h6>
 
-<hr>
-<h3>2. *ngFor directive example: </h3>
-<ul>
-    <li *ngFor="let user of userList">
-        {{user.userId}} - {{user.userName}} - {{user.userEmail}}
-    </li>
-</ul>
-<hr>
+                <p *ngIf="leapYear; else elseBlock">
+                    2024 is Leap Year
+                </p>
+                <ng-template #elseBlock>
+                    <p> 2025 is not Leap Year</p>
+                </ng-template>
 
+                <h6>2. *ngFor directive example: </h6>
+                <ul>
+                    <li *ngFor="let user of userList">
+                        {{user.userId}} - {{user.userName}} - {{user.userEmail}}
+                    </li>
+                </ul>
 
-<h3>3. *ngSwitch directive example: </h3>
+                <h6>3. *ngSwitch directive example: </h6>
+                
+                <div [ngSwitch]="today">
+                    <p *ngSwitchCase="'Monday'">It's Monday</p>
+                    <p *ngSwitchCase="'Tuesday'">It's Tuesday</p>
+                    <p *ngSwitchCase="'Wednesday'">It's Wednesday</p>
+                    <p *ngSwitchCase="'Thursday'">It's Thursday</p>
+                    <p *ngSwitchCase="'Friday'">It's Friday</p>
+                    <p *ngSwitchCase="'Saturday'">It's Saturday</p>
+                    <p *ngSwitchCase="'Sunday'">It's Sunday</p>
+                    <p *ngSwitchDefault>It's Holiday</p>
+                </div>
+                
+                <div class="d-flex gap-2">
 
-<div [ngSwitch]="today">
-    <p *ngSwitchCase="'Monday'">It's Monday</p>
-    <p *ngSwitchCase="'Tuesday'">It's Tuesday</p>
-    <p *ngSwitchCase="'Wednesday'">It's Wednesday</p>
-    <p *ngSwitchCase="'Thursday'">It's Thursday</p>
-    <p *ngSwitchCase="'Friday'">It's Friday</p>
-    <p *ngSwitchCase="'Saturday'">It's Saturday</p>
-    <p *ngSwitchCase="'Sunday'">It's Sunday</p>
-    <p *ngSwitchDefault>It's Holiday</p>
+                    <button class="btn btn-danger" (click)="chnageTheDay('Monday')">Monday</button>
+                    <button class="btn btn-danger" (click)="chnageTheDay('Monday')">Monday</button>
+                    <button class="btn btn-danger" (click)="chnageTheDay('Tuesday')">Tuesday</button>
+                    <button class="btn btn-danger" (click)="chnageTheDay('Wednesday')">Wednesday</button>
+                    <button class="btn btn-danger" (click)="chnageTheDay('Thursday')">Thursday</button>
+                    <button class="btn btn-danger" (click)="chnageTheDay('Friday')">Friday</button>
+                    <button class="btn btn-danger" (click)="chnageTheDay('Saturday')">Saturday</button>
+                    <button class="btn btn-danger" (click)="chnageTheDay('Sunday')">Sunday</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 3. Attribute Directives -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">3. Attribute Directives (ngClass & ngStyle)</h3>
+            <p>
+                Attribute directives change the appearance or behavior of an element
+                without changing the DOM structure.
+            </p>
+            <ul>
+                <li><strong>ngClass</strong> – Apply CSS classes dynamically</li>
+                <li><strong>ngStyle</strong> – Apply inline styles dynamically</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 4. Structural Directives -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">4. Structural Directives</h3>
+            <p>
+                Structural directives modify the layout by adding or removing elements
+                from the DOM.
+            </p>
+            <div class="info-box">
+                Key characteristics:
+                <ul class="mb-0">
+                    <li>Prefixed with *</li>
+                    <li>Operate on templates</li>
+                    <li>Modify DOM structure</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Structural vs New Control Flow -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">5. Structural Directives vs New Control Flow</h3>
+            <p>
+                Modern Angular introduces a new template control flow syntax using:
+                <strong>&#64;if, &#64;for, &#64;switch, &#64;empty</strong>.
+            </p>
+            <p>
+                This syntax improves readability, reduces boilerplate, and offers better performance
+                compared to traditional structural directives.
+            </p>
+            <div class="info-box">
+                Advantages of new control flow:
+                <ul class="mb-0">
+                    <li>Cleaner syntax</li>
+                    <li>Improved performance</li>
+                    <li>Better type safety</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Custom Directives -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">6. Custom Directives</h3>
+            <p>
+                Custom directives allow you to create reusable behaviors that can be applied
+                across multiple components.
+            </p>
+            <ul>
+                <li>Auto-focus inputs</li>
+                <li>Role-based UI rendering</li>
+                <li>Custom hover or highlight effects</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 7. Styling -->
+    <div class="card section-card mb-4">
+        <div class="card-body">
+            <h3 class="section-title">7. Styling in Angular</h3>
+            <p>
+                Angular supports multiple styling approaches to keep applications modular
+                and maintainable.
+            </p>
+            <ul>
+                <li>Component-level styles</li>
+                <li>Global styles</li>
+                <li> 
+                    <a class="text-danger" routerLink="/dyanamic-style">Dynamic styling using directives</a>
+                </li>
+            </ul>
+            <p>
+                Angular style encapsulation prevents CSS conflicts between components.
+            </p>
+        </div>
+    </div>
+
 </div>
 
-<button (click)="chnageTheDay('Monday')">Monday</button>
-<button (click)="chnageTheDay('Tuesday')">Tuesday</button>
-<button (click)="chnageTheDay('Wednesday')">Wednesday</button>
-<button (click)="chnageTheDay('Thursday')">Thursday</button>
-<button (click)="chnageTheDay('Friday')">Friday</button>
-<button (click)="chnageTheDay('Saturday')">Saturday</button>
-<button (click)="chnageTheDay('Sunday')">Sunday</button>
+<app-footer></app-footer>
